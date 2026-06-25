@@ -14,8 +14,8 @@ export default function Footer() {
 
           <Col className="footer-nav">
               <Stack gap={2}>
-                <p><Nav>Loja</Nav></p>
-                <p><Nav>Sobre nós</Nav></p>
+                <Nav>Loja</Nav>
+                <Nav>Sobre nós</Nav>
               </Stack>
           </Col>
         </Row>

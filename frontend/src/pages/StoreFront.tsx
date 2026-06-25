@@ -16,7 +16,7 @@ export default function StoreFront() {
         <p className="white-txt"><Button variant="success" size="lg">Navegue por nossas poções (clique aqui)</Button></p>
       </div>
       <div id="info" className="v-border">
-        <section className="about-us">
+        <section id="about-us">
           <h1 className="golden-txt cotitle">Sobre a loja</h1>
           <p>
             Aqui na <i>Poções e Soluções</i>, nós te entregamos apenas as infusões da mais alta qualidade, 
@@ -40,7 +40,7 @@ export default function StoreFront() {
           </Figure>
         </section>
 
-        <section className="history">
+          <section id="history">
           <h1 className="golden-txt cotitle">Nossa história</h1>
           <p>
             A loja <i>Poções e Soluções</i> possui muita tradição no preparo de suas fórmula. Criada em 

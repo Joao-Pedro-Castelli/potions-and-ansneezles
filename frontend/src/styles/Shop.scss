@@ -1,0 +1,29 @@
+@use "./style.scss";
+
+.store-title {
+  font-size: 3rem;
+
+}
+
+#potion-inventory {
+  display: flex;
+
+  gap: 6rem;
+}
+
+.potion {
+  display: grid;
+  grid-template-rows: 5fr 2fr 1fr;
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-areas:
+    ". image ."
+    ". title ."
+    "info info info";
+
+  height: 28rem;
+  width: 20rem;
+  margin: 4rem 0;
+
+  border-radius: 10px;
+  border: solid 2px style.$golden;
+}
