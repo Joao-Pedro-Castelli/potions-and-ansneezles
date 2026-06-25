@@ -1,3 +1,5 @@
+@use "./style.scss";
+
 .center-title {
   display: flex;
   flex-direction: column;
@@ -14,4 +16,8 @@
   p {
     text-align: center;
   }
+}
+
+#old-store-img {
+  background-color: style.$white;
 }

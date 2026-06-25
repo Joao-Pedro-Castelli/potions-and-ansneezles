@@ -1,0 +1,21 @@
+@use "./style.scss";
+
+
+footer {
+  margin-up: 4rem;
+  background-color: style.$black;
+
+  margin-bottom: 0;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .footer-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+  }
+}
