@@ -1,0 +1,17 @@
+.center-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 80vh;
+
+  h1,
+  h2 {
+    font-size: 5rem;
+  }
+
+  p {
+    text-align: center;
+  }
+}

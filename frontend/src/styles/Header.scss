@@ -1,0 +1,13 @@
+@use "./style.scss";
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+
+  font-size: 1.2em;
+  background-color: style.$black;
+
+  .tabas {
+    gap: 1rem;
+  }
+}
