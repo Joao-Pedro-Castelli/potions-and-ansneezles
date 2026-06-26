@@ -1,3 +1,5 @@
 .env
 
+src/uploads
+dist
 node_modules
