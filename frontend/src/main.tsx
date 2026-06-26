@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import StoreFront from "./pages/StoreFront";
 import Shop from "./pages/Shop";
 import Footer from "./components/Footer";
+import Admin from "./pages/Admin";
 
 
 createRoot(document.getElementById("root")!).render(
@@ -16,6 +17,7 @@ createRoot(document.getElementById("root")!).render(
         <Routes>
           <Route index element={<StoreFront />} />
           <Route path="loja" element={<Shop />} />
+          <Route path="admin" element={<Admin />} />
         </Routes>
       </div>
       <Footer />

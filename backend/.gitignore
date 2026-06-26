@@ -1,5 +1,5 @@
 .env
 
-src/uploads
+uploads
 dist
 node_modules

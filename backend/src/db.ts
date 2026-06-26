@@ -42,7 +42,7 @@ pot.potions.forEach(async (p) => {
 })
 
 export async function createPotion(potion: Potion) {
-  if (await potionModel.findAll({where: {name: potion.name}}) == null) {
+  if ((await potionModel.findAll({where: {name: potion.name}})).length == 0) {
     await potionModel.create(potion);
     return "OK"
   }

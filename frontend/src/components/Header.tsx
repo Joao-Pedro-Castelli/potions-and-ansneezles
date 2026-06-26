@@ -15,7 +15,7 @@ export default function Header() {
         <Nav.Link onClick={() => navigate("/#about-us")}>Sobre nós</Nav.Link>
         <Nav.Link onClick={() => navigate("/#history")}>Nossa história</Nav.Link>
       </Nav>
-      <Button variant="light">Login</Button>
+      <Button variant="light" onClick={() => navigate("/admin")}>Cadastrar poções</Button>
       </div>
     </Navbar>
   );

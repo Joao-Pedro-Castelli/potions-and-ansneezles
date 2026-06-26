@@ -11,9 +11,11 @@ const upload = multer({
 })
 
 const port = 3000;
+const origin = "http://localhost:5173";
+const addr = "http://localhost:3000";
 const router = express();
 router.use(cors({
-  origin: "http://localhost:5173",
+  origin: origin,
   credentials: true,
 }))
 
@@ -26,7 +28,6 @@ router.get("/", (_req, res) => {
 router.get("/potions", async (_req, res) => {
   try {
     const potions = await selectPotions();
-    console.log("Potions = " + potions);
     res.status(200).json(potions);
   }
   catch {
@@ -35,16 +36,20 @@ router.get("/potions", async (_req, res) => {
 });
 
 router.post("/potion", upload.single("potionImg"), async (req, res, _next) => {
-  const imageURI = req.file?.path;
-  const potion = potionValid.parse({...req.body, imgPath: imageURI});
   try {
+    const imageURI = req.file?.filename;
+    console.log(req.body);
+    const potion = potionValid.parse({...req.body, imgPath: `${addr}/potionimg/${imageURI}`});
     const resp = await createPotion(potion);
     res.status(201).send(resp);
   }
-  catch {
+  catch (err) {
+    console.log(err);
     res.status(400).send()
   }
 })
+
+router.use("/potionimg", express.static("uploads"));
 
 router.listen(port, () => {
   console.log(`Listening on http://localhost:${port}`);

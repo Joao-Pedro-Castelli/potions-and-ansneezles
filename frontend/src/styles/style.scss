@@ -9,13 +9,13 @@ $black: #080610;
 
 
 body {
-  height: 100%;
   font-family: "Cabin", sans-serif;
   background-image: linear-gradient(105deg, $deep-purple, $black);
 }
 
 #content {
   width: 70vw;
+  min-height: 88vh;
   margin: auto;
 }
 
