@@ -27,6 +27,12 @@ body {
   color: $golden;
 }
 
+$border-line: solid 1px $golden;
+
+.v-border {
+  border-bottom: $border-line;
+}
+
 .title {
   font-family: "Lato", sans-serif;
   font-weight: 700;
@@ -41,6 +47,10 @@ body {
 
 .bigger {
   font-size: calc($p-size * 1.5);
+}
+
+.link {
+  text-decoration: none;
 }
 
 p {

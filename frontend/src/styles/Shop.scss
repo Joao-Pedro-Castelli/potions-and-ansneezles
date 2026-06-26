@@ -11,14 +11,19 @@
   gap: 6rem;
 }
 
+$width: 20rem;
+$height: 28rem;
+
 .potion {
+
   display: grid;
-  grid-template-rows: 5fr 2fr 1fr;
-  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-rows: calc(5/10 * $height) calc(1/10 * $height) calc(2/10 * $height) calc(2/10 * $height);
+  grid-template-columns: calc($width / 2) calc($width / 2);
   grid-template-areas:
-    ". image ."
-    ". title ."
-    "info info info";
+    "img img"
+    "title title"
+    "info info"
+    "price buy";
 
   height: 28rem;
   width: 20rem;
@@ -26,4 +31,52 @@
 
   border-radius: 10px;
   border: solid 2px style.$golden;
+}
+
+.potion-img {
+  $img-pad: 0.75rem;
+
+  grid-area: img;
+
+  padding: $img-pad;
+
+  img {
+    width: calc($width - $img-pad);
+    height: calc(5/10 * $height - $img-pad);
+  }
+}
+
+.potion-title {
+  grid-area: title;
+
+  padding: 0 1.5rem;
+}
+
+.potion-info {
+  grid-area: info;
+
+  padding: 0 1.5rem;
+}
+
+.potion-price {
+  grid-area: price;
+
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem 2rem;
+  margin: 0;
+}
+
+.potion-buy {
+  grid-area: buy;
+
+  position: relative;
+
+  button {
+    $space: 2.0rem;
+
+    position: absolute;
+    bottom: $space;
+    right: $space;
+  }
 }

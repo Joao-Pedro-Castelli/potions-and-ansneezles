@@ -1,11 +1,17 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Image, Row } from "react-bootstrap";
 
 import "./../styles/Shop.scss";
 
 function Potion(){
   return(
       <div className="potion">
-        <h2 className="white-txt">Poção</h2>
+        <Image className="potion-img white-txt" src="nada por enquanto" alt="Poção" />
+        <h2 className="potion-title golden-txt">Poção</h2>
+        <p className="potion-info">Nome</p>
+        <p className="potion-price">Preço</p>
+        <div className="potion-buy">
+          <Button size="lg" variant="outline-danger">Comprar</Button>
+        </div>
       </div>
   )
 }

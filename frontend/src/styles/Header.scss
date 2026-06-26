@@ -1,12 +1,15 @@
 @use "./style.scss";
 
 .navbar {
+  background-color: style.$black;
+}
+
+.header-navbar {
   display: flex;
   justify-content: space-evenly;
 
-  margin-bottom: 3rem;
+  width: 100%;
   font-size: 1.2em;
-  background-color: style.$black;
 
   .tabas {
     gap: 1rem;

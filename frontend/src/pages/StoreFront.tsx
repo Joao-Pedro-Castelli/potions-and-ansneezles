@@ -1,9 +1,10 @@
-import { Button, Figure } from "react-bootstrap";
+import { Button, Col, Container, Figure, Row } from "react-bootstrap";
 
 import WitchImage from "./../assets/StoreFront/creativecanvas-cute-witch.svg";
 import OldStoreImage from "./../assets/StoreFront/gdj-oldstore.svg";
 import StoreImage from "./../assets/StoreFront/gemini-store.png";
 import "./../styles/StoreFront.scss";
+import { Link } from "react-router";
 
 export default function StoreFront() {
   return(
@@ -13,35 +14,43 @@ export default function StoreFront() {
         <h1 className="golden-txt title">As melhores poções</h1>
         <h2 className="white-txt cotitle">A solução para você</h2>
         <p className="white-txt">Aqui você pode encontrar misturas para todo tipo de problema</p>
-        <p className="white-txt"><Button variant="success" size="lg">Navegue por nossas poções (clique aqui)</Button></p>
+        <Button variant="success" size="lg"><Link to="/loja" className="white-txt link">Navegue por nossas poções (clique aqui)</Link></Button>
       </div>
-      <div id="info" className="v-border">
-        <section id="about-us">
-          <h1 className="golden-txt cotitle">Sobre a loja</h1>
-          <p>
-            Aqui na <i>Poções e Soluções</i>, nós te entregamos apenas as infusões da mais alta qualidade, 
-            em um preço acessível e entregue em tempo recorde. Todos os ingredientes são retirados 
-            de fontes sustentáveis a partir de parceiros muito confiáveis nossos.
-            A loja física se encontra no Beco da Última Saída (Londres), mas você pode receber 
-            por pombo-correio pedindo aqui no site ou entrando em contato por orbe, para pedidos 
-            personalizados.
-          </p>
-          <p>
-            Caso você seja novo por aqui, permita-me me introduzir: meu nome é Anabelle
-            Merigold e eu venho de uma família de apotecários. Desde adolescente, preparo poções 
-            junto com meus pais. Já criei diversas poções originais da loja e me dedico 
-            completamente a cada obra que você pode comprar aqui.
-          </p>
-          <Figure>
-            <Figure.Image width={256} alt="Foto de Anabelle Merigold" src={WitchImage} />
-            <Figure.Caption className="white-txt">
-              Anabelle Merigold, atual dona do Poções e Soluções
-            </Figure.Caption>
-          </Figure>
+      <div id="info">
+        <section id="about-us" className="front-section v-border">
+          <h1 className="golden-txt cotitle section-title">Sobre a loja</h1>
+          <Container>
+            <Row>
+            <Col>
+              <p>
+                Aqui na <i>Poções e Soluções</i>, nós te entregamos apenas as infusões da mais alta qualidade, 
+                em um preço acessível e entregue em tempo recorde. Todos os ingredientes são retirados 
+                de fontes sustentáveis a partir de parceiros muito confiáveis nossos.
+                A loja física se encontra no Beco da Última Saída (Londres), mas você pode receber 
+                por pombo-correio pedindo aqui no site ou entrando em contato por orbe, para pedidos 
+                personalizados.
+              </p>
+              <p>
+                Caso você seja novo por aqui, permita-me me introduzir: meu nome é Anabelle
+                Merigold e eu venho de uma família de apotecários. Desde adolescente, preparo poções 
+                junto com meus pais. Já criei diversas poções originais da loja e me dedico 
+                completamente a cada obra que você pode comprar aqui.
+              </p>
+            </Col>
+            <Col>
+              <Figure>
+                <Figure.Image width={256} alt="Foto de Anabelle Merigold" src={WitchImage} />
+                <Figure.Caption className="white-txt">
+                  Anabelle Merigold, atual dona do Poções e Soluções
+                </Figure.Caption>
+              </Figure>
+            </Col>
+            </Row>
+          </Container>
         </section>
 
-          <section id="history">
-          <h1 className="golden-txt cotitle">Nossa história</h1>
+        <section id="history" className="front-section">
+          <h1 className="golden-txt cotitle section-title">Nossa história</h1>
           <p>
             A loja <i>Poções e Soluções</i> possui muita tradição no preparo de suas fórmula. Criada em 
             1867 por Joseph Merigold durante a Grande Revolução de Graindel, o comércio estabeleceu-se 
